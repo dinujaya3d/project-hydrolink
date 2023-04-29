@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "455000053940",
+    "project_id": "project-hydrolink",
+    "storage_bucket": "project-hydrolink.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:455000053940:android:cf57831bb59f9668d69fe1",
+        "android_client_info": {
+          "package_name": "com.example.hydrolink"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "455000053940-gih536mcq9s00eas0698356muv5dpso2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBiQzjHJiYvMLLqLygklWhJUqKqa4MBRYw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "455000053940-gih536mcq9s00eas0698356muv5dpso2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

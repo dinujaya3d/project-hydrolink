@@ -4,16 +4,19 @@ import 'package:firebase_core/firebase_core.dart' show FirebaseOptions;
 import 'package:flutter/foundation.dart'
     show defaultTargetPlatform, kIsWeb, TargetPlatform;
 
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
+
 /// Default [FirebaseOptions] for use with your Firebase apps.
 ///
 /// Example:
 /// ```dart
-/// import 'firebase_options.dart';
 /// // ...
 /// await Firebase.initializeApp(
 ///   options: DefaultFirebaseOptions.currentPlatform,
 /// );
 /// ```
+
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
@@ -67,7 +70,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '455000053940',
     projectId: 'project-hydrolink',
     storageBucket: 'project-hydrolink.appspot.com',
-    iosClientId: '455000053940-grtmenh14rsot1delu6t9rghf26n6kqq.apps.googleusercontent.com',
+    iosClientId:
+        '455000053940-grtmenh14rsot1delu6t9rghf26n6kqq.apps.googleusercontent.com',
     iosBundleId: 'com.example.hydrolink',
   );
 
@@ -77,7 +81,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '455000053940',
     projectId: 'project-hydrolink',
     storageBucket: 'project-hydrolink.appspot.com',
-    iosClientId: '455000053940-grtmenh14rsot1delu6t9rghf26n6kqq.apps.googleusercontent.com',
+    iosClientId:
+        '455000053940-grtmenh14rsot1delu6t9rghf26n6kqq.apps.googleusercontent.com',
     iosBundleId: 'com.example.hydrolink',
   );
 }

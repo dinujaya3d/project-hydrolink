@@ -1,1 +1,7 @@
-this is frontend
+Platform  Firebase App Id
+web       1:455000053940:web:0f0a8434082e181bd69fe1
+android   1:455000053940:android:cf57831bb59f9668d69fe1
+ios       1:455000053940:ios:233b0a0d2ce07eb8d69fe1
+macos     1:455000053940:ios:233b0a0d2ce07eb8d69fe1
+
+https://firebase.google.com/docs/flutter/setup

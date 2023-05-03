@@ -2,11 +2,9 @@ import 'package:flutter/material.dart';
 
 class SquareTile extends StatelessWidget {
   final String imagePath;
-  final String title;
   const SquareTile({
     super.key,
     required this.imagePath,
-    required this.title
   });
 
   @override
@@ -18,16 +16,10 @@ class SquareTile extends StatelessWidget {
         borderRadius: BorderRadius.circular(16),
         color: Colors.grey[200],
       ),
-      child: Row(
-        children: [
-          Image.asset(
-            imagePath,
-            height: 40,
-          ),
-          const SizedBox(width: 20),
-          Text(title,
-              style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold))
-        ],
+      child: Image.asset(
+        imagePath,
+        height: 40,
+        width: 40,
       ),
     );
   }

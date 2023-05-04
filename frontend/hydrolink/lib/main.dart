@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hydrolink/pages/auth_page.dart';
+import 'package:hydrolink/pages/home_page.dart';
 import 'pages/login_page.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: AuthPage(),
+      home: HomePage(),
     );
   }
 }

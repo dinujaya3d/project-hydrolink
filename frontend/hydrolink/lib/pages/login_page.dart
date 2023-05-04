@@ -2,16 +2,65 @@ import 'package:flutter/material.dart';
 import 'package:hydrolink/components/my_button.dart';
 import 'package:hydrolink/components/my_textfield.dart';
 import 'package:hydrolink/components/square_tile.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:hydrolink/pages/home_page.dart';
 
-class LoginPage extends StatelessWidget {
+class LoginPage extends StatefulWidget {
   LoginPage({super.key});
 
+  @override
+  State<LoginPage> createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
   // text editing controllers
-  final usernameController = TextEditingController();
+  final emailController = TextEditingController();
+
   final passwordController = TextEditingController();
 
   // sign user in method
-  void signUserIn() {}
+  void signUserIn() async {
+    // show loading cycles
+    showDialog(
+      context: context,
+      builder: (context) {
+        return const Center(
+          child: CircularProgressIndicator(),
+        );
+      },
+    );
+
+    Navigator.pop(context);
+
+    //Show await circles
+    try {
+      await FirebaseAuth.instance.signInWithEmailAndPassword(
+        email: emailController.text,
+        password: passwordController.text,
+      );
+    } on FirebaseAuthException catch (e) {
+      // TODO
+      Navigator.pop(context);
+      showErrorMessage(e.code);
+    }
+  }
+
+  // error message to user
+  void showErrorMessage(String message) {
+    showDialog(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          backgroundColor: Colors.deepPurple,
+          title: Center(
+              child: Text(
+            message,
+            style: TextStyle(color: Colors.white),
+          )),
+        );
+      },
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -23,12 +72,12 @@ class LoginPage extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const SizedBox(height: 45),
+                const SizedBox(height: 30),
 
                 // logo
                 const Icon(
                   Icons.lock,
-                  size: 80,
+                  size: 100,
                 ),
 
                 const SizedBox(height: 50),
@@ -46,7 +95,7 @@ class LoginPage extends StatelessWidget {
 
                 // username textfield
                 MyTextField(
-                  controller: usernameController,
+                  controller: emailController,
                   hintText: 'Username',
                   obscureText: false,
                 ),
@@ -64,7 +113,7 @@ class LoginPage extends StatelessWidget {
 
                 // forgot password?
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 15.0),
+                  padding: const EdgeInsets.symmetric(horizontal: 25.0),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
@@ -76,14 +125,14 @@ class LoginPage extends StatelessWidget {
                   ),
                 ),
 
-                const SizedBox(height: 25),
+                const SizedBox(height: 20),
 
                 // sign in button
                 MyButton(
                   onTap: signUserIn,
                 ),
 
-                const SizedBox(height: 20),
+                const SizedBox(height: 40),
 
                 // or continue with
                 Padding(
@@ -120,20 +169,16 @@ class LoginPage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: const [
                     // google button
-                    SquareTile(
-                      imagePath: 'lib/images/google.png',
-                    ),
+                    SquareTile(imagePath: 'lib/images/google.png'),
 
                     SizedBox(width: 25),
 
                     // apple button
-                    SquareTile(
-                      imagePath: 'lib/images/apple.png',
-                    )
+                    SquareTile(imagePath: 'lib/images/apple.png')
                   ],
                 ),
 
-                const SizedBox(height: 50),
+                const SizedBox(height: 30),
 
                 // not a member? register now
                 Row(

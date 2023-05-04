@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>207507465271-5ed7ufpd44lqqndoueq0b8pt2vkc1tbp.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.207507465271-5ed7ufpd44lqqndoueq0b8pt2vkc1tbp</string>
+	<key>API_KEY</key>
+	<string>AIzaSyB4cPLOD9xv0ulrhr-BmY5L_9ilG3mcpoA</string>
+	<key>GCM_SENDER_ID</key>
+	<string>207507465271</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.hydrolink</string>
+	<key>PROJECT_ID</key>
+	<string>project-hydrolink-c1716</string>
+	<key>STORAGE_BUCKET</key>
+	<string>project-hydrolink-c1716.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:207507465271:ios:772c12bd14532101908bb2</string>
+</dict>
+</plist>
